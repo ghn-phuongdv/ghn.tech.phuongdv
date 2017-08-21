@@ -299,15 +299,7 @@ X-Auth: {{X-Auth}}
 		],
 		"ExpectedDate": "2017-7-12",
 		"StartDate": "2017-7-12",
-		"EndDate": "2017-7-14",
-		"Vehicle": {
-			"VehicleNo": "16531",
-			"ContactName": "Tran Van A",
-			"ContactPhone": "0909887887",
-			"ContactName1": "Tran Van B",
-			"ContactPhone1": "0909888887",
-			"VehicleCode": "AERRSX",		
-		},
+		"EndDate": "2017-7-14",		
 		"Status": "FINISHED"
 	}
 ```
