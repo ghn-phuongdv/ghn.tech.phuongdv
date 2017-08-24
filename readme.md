@@ -243,9 +243,6 @@ X-Auth: {{X-Auth}}
 		"PackList": [
 			"2F043FQA"
 		],
-		"UnpackList": [
-			"2F043FQA"
-		],
 		"Note": "Test",
 		"ExpectedDate": "2017-7-12"
 	}
