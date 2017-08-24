@@ -122,8 +122,7 @@ X-Auth: {{X-Auth}}
 
 - Body parameters
 ```json
-	{
-		"ShippingOrderID":230539,
+	{		
 		"OrderCode":"2F5VAXZ2",
 		"CurrentWarehouseID":1047,
 		"DeliveryWarehouseID":1233,
@@ -168,8 +167,7 @@ X-Auth: {{X-Auth}}
 ```json
 	{	
 		"ShippingOrders":[
-			{
-				"ShippingOrderID":230539,
+			{				
 				"OrderCode":"2F5VAXZ2",
 				"CurrentWarehouseID":1047,
 				"DeliveryWarehouseID":1233,
@@ -182,8 +180,7 @@ X-Auth: {{X-Auth}}
 				"ReturnHubId":0,
 				"ReturnWarehouseId":0
 			},
-			{
-				"ShippingOrderID":230560,
+			{				
 				"OrderCode":"2FBX393Q",
 				"CurrentWarehouseID":1220,
 				"DeliveryWarehouseID":1233,
@@ -243,7 +240,10 @@ X-Auth: {{X-Auth}}
 				"Description": "Không thuộc chuyến luân chuyển"
 			}
 		],
-		"OrderCodeList": [
+		"PackList": [
+			"2F043FQA"
+		],
+		"UnpackList": [
 			"2F043FQA"
 		],
 		"Note": "Test",
@@ -451,7 +451,7 @@ q = {"PackageCode": "ZJCLGTL6GCG","CurrentWarehouseID": 1295,"ToWarehouseID": 12
 | Height                 |                                                                  |
 | Width                  |                                                                  |
 | Length                 |                                                                  |
-| Status                 | Package status, support is (DRAFTS,DELIVERING,RECIEVED,FINISHED) |
+| Status                 | Package status, support is (DRAFTS,DELIVERING,RECIEVED,FINISHING,FINISHED) |
 | ExpectedDate           | Expected date fortmat yyyy-mm-dd                                 |
 | StartDate              | Start date fortmat yyyy-mm-dd                                    |
 | EndDate                | End date fortmat yyyy-mm-dd                                      |
@@ -475,9 +475,9 @@ Content-Type: application/json
             "Height": 80,
             "Width": 60,
             "Length": 60,
-            "OrderCodeList": [
+            "PackList": [
                 "2FP53Y37"
-            ],
+            ]
             "Note": "Test",
             "ExpectedTime": "Jun 12, 2017 12:00:00 AM",
             "CreatedByID": 210737,
