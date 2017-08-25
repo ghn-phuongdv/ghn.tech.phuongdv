@@ -332,15 +332,21 @@ X-Auth: {{X-Auth}}
 		"TransitionSessions": [
 			{		
 				"PackageCode": "QEARUJW7I9C",	
-				"Status": "RECIEVED"
+				"Status": "RECIEVED",
+				"StateDate": "yyyy-mm-dd",
+				"EndDate": "yyyy-mm-dd"
 			},
 			{		
 				"PackageCode": "K2FWTNSDF4B",	
-				"Status": "RECIEVED"
+				"Status": "RECIEVED",
+				"StateDate": "yyyy-mm-dd",
+				"EndDate": "yyyy-mm-dd"
 			},
 			{		
 				"PackageCode": "ZJCLGTL6GCG",	
-				"Status": "RECIEVED"
+				"Status": "RECIEVED",
+				"StateDate": "yyyy-mm-dd",
+				"EndDate": "yyyy-mm-dd"
 			}
 		]
 	}	
