@@ -333,20 +333,17 @@ X-Auth: {{X-Auth}}
 			{		
 				"PackageCode": "QEARUJW7I9C",	
 				"Status": "RECIEVED",
-				"StateDate": "yyyy-mm-dd",
-				"EndDate": "yyyy-mm-dd"
+				"StartDate": "yyyy-mm-dd"
 			},
 			{		
 				"PackageCode": "K2FWTNSDF4B",	
 				"Status": "RECIEVED",
-				"StateDate": "yyyy-mm-dd",
-				"EndDate": "yyyy-mm-dd"
+				"StartDate": "yyyy-mm-dd"				
 			},
 			{		
 				"PackageCode": "ZJCLGTL6GCG",	
 				"Status": "RECIEVED",
-				"StateDate": "yyyy-mm-dd",
-				"EndDate": "yyyy-mm-dd"
+				"StartDate": "yyyy-mm-dd"
 			}
 		]
 	}	
