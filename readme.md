@@ -1,5 +1,5 @@
 # Git
-- URL: https://g.ghn.vn/datbq/front-end-packaging
+- URL: https://g.ghn.vn/inside-system/inside-api-packaging
 - Install: config nginx, deploy
 
 # Format repo gitlab: 
@@ -76,7 +76,7 @@ Please make sure to use the API with http only.
 
 1) The requests require a **X-APIKEY** & **X-APISECRET**, you can find both in the User Model at the fields (ssoId,secret).
 
-2) The requests require a **X-Auth**, you can find and use it at [https://g.ghn.vn/phuongdv/account-login-service](https://g.ghn.vn/phuongdv/account-login-service).
+2) The requests require a **X-Auth**, you can find and use it at [https://g.ghn.vn/inside-system/inside-api-account](https://g.ghn.vn/inside-system/inside-api-account).
 
 Response is json, structure is as follows:
 ```json
@@ -122,19 +122,20 @@ X-Auth: {{X-Auth}}
 
 - Body parameters
 ```json
-	{		
-		"OrderCode":"2F5VAXZ2",
-		"CurrentWarehouseID":1047,
-		"DeliveryWarehouseID":1233,
-		"OrderDate":"2017-06-05 14:55:53.000",
-		"ShippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
-		"ExpectedDeliveryTime":"2017-06-06 19:00:00.000",
-		"FromDistrictID":1442,
-		"ToDistrictID":1453,
-		"CurrentStatus":"Storing",
-		"PickWarehouseID":1047,
-		"ReturnHubId":0,
-		"ReturnWarehouseId":0
+	{
+		"orderCode":"2F5VAXZ2",
+		"currentWarehouseId":1047,
+		"deliveryWarehouseId":1233,
+		"weight": 56,
+		"orderDate":"2017-06-05 14:55:53.000",
+		"shippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
+		"expectedDeliveryTime":"2017-06-06 19:00:00.000",
+		"fromDistrictId":1442,
+		"toDistrictId":1453,
+		"currentStatus":"Storing",
+		"pickWarehouseId":1047,
+		"returnHubId":0,
+		"returnWarehouseId":0
 	}
 ```
 
@@ -167,32 +168,35 @@ X-Auth: {{X-Auth}}
 ```json
 	{	
 		"ShippingOrders":[
-			{				
-				"OrderCode":"2F5VAXZ2",
-				"CurrentWarehouseID":1047,
-				"DeliveryWarehouseID":1233,
-				"OrderDate":"2017-06-05 14:55:53.000",
-				"ShippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
-				"ExpectedDeliveryTime":"2017-06-06 19:00:00.000","FromDistrictID":1442,
-				"ToDistrictID":1453,
-				"CurrentStatus":"Storing",
-				"PickWarehouseID":1047,
-				"ReturnHubId":0,
-				"ReturnWarehouseId":0
+			{
+				"orderCode":"3X7ALXZ2",
+				"currentWarehouseId":1047,
+				"deliveryWarehouseId":1233,
+				"weight": 56,
+				"orderDate":"2017-06-05 14:55:53.000",
+				"shippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
+				"expectedDeliveryTime":"2017-06-06 19:00:00.000",
+				"fromDistrictId":1442,
+				"toDistrictId":1453,
+				"currentStatus":"Storing",
+				"pickWarehouseId":1047,
+				"returnHubId":0,
+				"returnWarehouseId":0
 			},
-			{				
-				"OrderCode":"2FBX393Q",
-				"CurrentWarehouseID":1220,
-				"DeliveryWarehouseID":1233,
-				"OrderDate":"2017-06-05 16:49:00.000",
-				"ShippingAddress":"70 Lữ Gia, Hồ Chí Minh, Việt Nam",
-				"ExpectedDeliveryTime":"2017-06-23 05:00:00.000",
-				"FromDistrictID":1453,
-				"ToDistrictID":1453,
-				"CurrentStatus":"Storing",
-				"PickWarehouseID":1220,
-				"ReturnHubId":0,
-				"ReturnWarehouseId":0
+			{
+				"orderCode":"6C7ALXZ2",
+				"currentWarehouseId":1047,
+				"deliveryWarehouseId":1233,
+				"weight": 56,
+				"orderDate":"2017-06-05 14:55:53.000",
+				"shippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
+				"expectedDeliveryTime":"2017-06-06 19:00:00.000",
+				"fromDistrictId":1442,
+				"toDistrictId":1453,
+				"currentStatus":"Storing",
+				"pickWarehouseId":1047,
+				"returnHubId":0,
+				"returnWarehouseId":0
 			}
 		]
 	}	
@@ -225,27 +229,36 @@ X-Auth: {{X-Auth}}
 
 - Body parameters
 ```json
-	{		
-		"CurrentWarehouseID": 1295,
-		"ToWarehouseID": 1220,
-		"FromWarehouseID": 1060,
-		"PackageType": "Thùng lớn 1",
-		"Weight": 90,
-		"Height": 80,
-		"Width": 60,
-		"Length": 60,
-		"ErrorList": [
+	{
+		"packageCode": "MAOBG12AWCO",
+		"currentWarehouseId": 1295,
+		"toWarehouseId": 1060,
+		"fromWarehouseId": 1295,
+		"packageType": "Thùng lớn 1",
+		"weight": 0,
+		"height": 80,
+		"width": 60,
+		"length": 60,
+		"packList": [
+			"2FBAA47K",
+			"2FB9RLX7"
+		],
+		"errorList": [
 			{
-				"OrderCode": "2FPR3L94",
-				"Description": "Không thuộc chuyến luân chuyển"
+				"orderCode": "2FB2VA9N",
+				"description": "Không thuộc chuyến luân chuyển"
+			},
+			{
+				"orderCode": "2F51VA9I",
+				"description": "Không thuộc chuyến luân chuyển"
+			},
+			{
+				"orderCode": "2FBAA47K",
+				"description": "Không thuộc chuyến luân chuyển"
 			}
 		],
-		"PackList": [
-			"2F043FQA"
-		],
-		"Note": "Test",
-		"ExpectedDate": "2017-7-12"
-	}
+		"status": "DRAFTS"
+	}	
 ```
 
 - Response
@@ -275,29 +288,40 @@ X-Auth: {{X-Auth}}
 
 - Body parameters
 ```json
-	{		
-		"CurrentWarehouseID": 1295,
-		"ToWarehouseID": 1220,
-		"FromWarehouseID": 1060,
-		"PackageType": "Thùng lớn 1",
-		"Weight": 90,
-		"Height": 80,
-		"Width": 60,
-		"Length": 60,
-		"ErrorList": [
+	{
+		"packageCode": "MAOBG12AWCO",
+		"currentWarehouseId": 1295,
+		"toWarehouseId": 1060,
+		"fromWarehouseId": 1295,
+		"packageType": "Thùng lớn 1",
+		"weight": 0,
+		"height": 80,
+		"width": 60,
+		"length": 60,
+		"packList": [
+			"2FBAA47K",
+			"2FB9RLX7"
+		],
+		"unpackList": [
+			"2FBAA47K",
+			"2FB9RLX7"
+		],
+		"errorList": [
 			{
-				"OrderCode": "2FPR3L94",
-				"Description": "Không thuộc chuyến luân chuyển"
+				"orderCode": "2FB2VA9N",
+				"description": "Không thuộc chuyến luân chuyển"
 			},
 			{
-				"OrderCode": "2FB3RA57",
-				"Description": "Không ở trong trạng thái luân chuyển"
+				"orderCode": "2F51VA9I",
+				"description": "Không thuộc chuyến luân chuyển"
+			},
+			{
+				"orderCode": "2FBAA47K",
+				"description": "Không thuộc chuyến luân chuyển"
 			}
 		],
-		"ExpectedDate": "2017-7-12",
-		"StartDate": "2017-7-12",
-		"EndDate": "2017-7-14",		
-		"Status": "FINISHED"
+		"note": "Test",
+		"status": "FINISHED"
 	}
 ```
 
@@ -331,19 +355,22 @@ X-Auth: {{X-Auth}}
 	{
 		"TransitionSessions": [
 			{		
-				"PackageCode": "QEARUJW7I9C",	
-				"Status": "RECIEVED",
-				"StartDate": "yyyy-mm-dd"
+				"packageCode": "QEARUJW7I9C",	
+				"status": "RECIEVED",
+				"startTime": "dd/MM/yyyy HH:mm a",
+				"expectedTime": "dd/MM/yyyy HH:mm a"
 			},
 			{		
-				"PackageCode": "K2FWTNSDF4B",	
-				"Status": "RECIEVED",
-				"StartDate": "yyyy-mm-dd"				
+				"packageCode": "K2FWTNSDF4B",	
+				"status": "RECIEVED",
+				"startTime": "dd/MM/yyyy HH:mm a",
+				"expectedTime": "dd/MM/yyyy HH:mm a"
 			},
 			{		
-				"PackageCode": "ZJCLGTL6GCG",	
-				"Status": "RECIEVED",
-				"StartDate": "yyyy-mm-dd"
+				"packageCode": "ZJCLGTL6GCG",	
+				"status": "RECIEVED",
+				"startTime": "dd/MM/yyyy HH:mm a",
+				"expectedTime": "dd/MM/yyyy HH:mm a"
 			}
 		]
 	}	
@@ -438,23 +465,24 @@ limit = 20 | default is 20
 
 reverse = true/false | default is false
 
-q = {"PackageCode": "ZJCLGTL6GCG","CurrentWarehouseID": 1295,"ToWarehouseID": 1220,"FromWarehouseID": 1060,"PackageType": "Thùng lớn 1","Weight": 0,"Height": 80,"Width": 60,"Length": 60,"Status": "DRAFTS","ExpectedDate": "2017-7-12","StartDate": "2017-7-12","EndDate": "2017-7-14",}
+q = {"packageCode": "ZJCLGTL6GCG","currentWarehouseId": 1295,"toWarehouseId": 1220,"fromWarehouseId": 1060,"packageType": "Thùng lớn 1","weight": 0,"height": 80,"width": 60,"length": 60,"status": "DRAFTS","expectedDate": "2017-7-12","startDate": "2017-7-12","endDate": "2017-7-14","createdDate": "2017-7-14"}
 
-| Name                   | Description                                                      |
-| ---------------------- | ---------------------------------------------------------------- |
-| PackageCode            | The barcode of a package                                         |
-| CurrentWarehouseID     | Current warehouse id                                             |
-| FromWarehouseID        | From warehouse id                                                |
-| ToWarehouseID          | To warehouse id                                                  |
-| PackageType            | Package type                                                     |
-| Weight                 |                                                                  |
-| Height                 |                                                                  |
-| Width                  |                                                                  |
-| Length                 |                                                                  |
-| Status                 | Package status, support is (DRAFTS,DELIVERING,RECIEVED,FINISHING,FINISHED) |
-| ExpectedDate           | Expected date fortmat yyyy-mm-dd                                 |
-| StartDate              | Start date fortmat yyyy-mm-dd                                    |
-| EndDate                | End date fortmat yyyy-mm-dd                                      |
+| Name                   | Description                                                                |
+| ---------------------- | ---------------------------------------------------------------------------|
+| packageCode            | The barcode of a package                                                   |
+| currentWarehouseId     | Current warehouse id                                                       |
+| fromWarehouseId        | From warehouse id                                                          |
+| toWarehouseId          | To warehouse id                                                            |
+| packageType            | Package type                                                               |
+| weight                 |                                                                            |
+| height                 |                                                                            |
+| width                  |                                                                            |
+| length                 |                                                                            |
+| status                 | Package status, support is (DRAFTS,DELIVERING,RECIEVED,FINISHING,FINISHED) |
+| expectedDate           | Expected date fortmat yyyy-mm-dd                                           |
+| startDate              | Start date fortmat yyyy-mm-dd                                              |
+| endDate                | End date fortmat yyyy-mm-dd                                                |
+| createdDate            | Created date fortmat yyyy-mm-dd                                            |
 
 - Body parameters: none
 
@@ -462,30 +490,89 @@ q = {"PackageCode": "ZJCLGTL6GCG","CurrentWarehouseID": 1295,"ToWarehouseID": 12
 Content-Type: application/json
 ```json
 	{
-		"status":"OK",
-		"total": 1,
-		"message": "Query TransitionSession successfully." 
-		"data": [{
-            "PackageCode": "AQGCGTASLSH",
-            "CurrentWarehouseID": 1295,
-            "ToWarehouseID": 1220,
-            "FromWarehouseID": 1060,
-            "PackageType": "Thùng lớn 1",
-            "Weight": 0,
-            "Height": 80,
-            "Width": 60,
-            "Length": 60,
-            "PackList": [
-                "2FP53Y37"
-            ]
-            "Note": "Test",
-            "ExpectedTime": "Jun 12, 2017 12:00:00 AM",
-            "CreatedByID": 210737,
-            "Status": "DRAFTS",
-            "orderNumber": 14,
-            "id": "598ca22de7ed3f02e77c727d",
-            "createdTime": "Aug 11, 2017 1:13:01 AM",
-            "lastUpdatedTime": "Aug 11, 2017 1:13:01 AM"
-        }]
+		"status": "OK",
+		"data": [
+			{
+				"packageCode": "MAOBG12AWCO",
+				"currentWarehouseId": 1295,
+				"toWarehouseId": 1060,
+				"fromWarehouseId": 1295,
+				"packageType": "Thùng lớn 1",
+				"weight": 0,
+				"height": 80,
+				"width": 60,
+				"length": 60,
+				"packList": [
+					"2FBAA47K",
+					"2FB9RLX7"
+				],
+				"unpackList": [
+					"2FBAA47K",
+					"2FB9RLX7"
+				],
+				"errorList": [
+					{
+						"orderCode": "2FB2VA9N",
+						"description": "Không thuộc chuyến luân chuyển",
+						"createdById": "210737",
+						"created": "Sep 13, 2017 3:36:00 PM",
+						"updatedById": "209937",
+						"updated": "Sep 18, 2017 10:00:19 AM"
+					},
+					{
+						"orderCode": "2F51VA9I",
+						"description": "Không thuộc chuyến luân chuyển",
+						"createdById": "210737",
+						"created": "Sep 13, 2017 3:36:00 PM",
+						"updatedById": "209937",
+						"updated": "Sep 18, 2017 10:00:19 AM"
+					},
+					{
+						"orderCode": "2FBAA47K",
+						"description": "Không thuộc chuyến luân chuyển",
+						"createdById": "209937",
+						"created": "Sep 18, 2017 10:00:19 AM",
+						"updatedById": "209937",
+						"updated": "Sep 18, 2017 10:00:19 AM"
+					}
+				],
+				"note": "Test",
+				"startTime": "Sep 15, 2017 10:19:00 AM",
+				"endTime": "Sep 18, 2017 10:00:19 AM",
+				"history": [
+					{
+						"createdById": "123123",
+						"created": "Sep 15, 2017 10:19:01 AM",
+						"action": "DELIVERING"
+					},
+					{
+						"createdById": "209937",
+						"created": "Sep 18, 2017 9:58:33 AM",
+						"action": "RECIEVED"
+					},
+					{
+						"createdById": "209937",
+						"created": "Sep 18, 2017 9:59:06 AM",
+						"action": "FINISHING",
+						"unpackList": [
+							"2FBAA47K"
+						]
+					},
+					{
+						"createdById": "209937",
+						"created": "Sep 18, 2017 10:00:19 AM",
+						"action": "FINISHED",
+						"unpackList": [
+							"2FB9RLX7"
+						]
+					}
+				],
+				"createdById": "210737",
+				"status": "FINISHED",
+				"date": "Sep 13, 2017 3:36:00 PM",
+				"id": "59b8edf0e5b075d5dc936eab",
+				"createdTime": "Sep 13, 2017 3:36:00 PM",
+				"lastUpdatedTime": "Sep 18, 2017 10:00:19 AM"
+			}]
 	}
 ```
