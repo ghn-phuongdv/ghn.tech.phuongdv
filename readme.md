@@ -123,19 +123,19 @@ X-Auth: {{X-Auth}}
 - Body parameters
 ```json
 	{
-		"orderCode":"2F5VAXZ2",
-		"currentWarehouseId":1047,
-		"deliveryWarehouseId":1233,
-		"weight": 56,
-		"orderDate":"2017-06-05 14:55:53.000",
-		"shippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
-		"expectedDeliveryTime":"2017-06-06 19:00:00.000",
-		"fromDistrictId":1442,
-		"toDistrictId":1453,
-		"currentStatus":"Storing",
-		"pickWarehouseId":1047,
-		"returnHubId":0,
-		"returnWarehouseId":0
+		"orderId":"9899196",
+		"orderCode":"157127390992",
+		"weight": 50,
+		"clientId": 3200,
+		"currentWarehouseId":"1060",
+		"deliveryWarehouseId":"1046",
+		"pickWarehouseId":"1220",
+		"returnWarehouseId": "1220",
+		"orderDate": "2017-05-23T11:46:40",
+		"createdDate": "2017-05-23T11:46:40",
+		"expectedDeliveryTime":"2017-05-25T11:46:40",
+		"expectedReturnTime": "2017-05-27T11:46:40",
+		"currentStatus":"Return"
 	}
 ```
 
@@ -169,34 +169,34 @@ X-Auth: {{X-Auth}}
 	{	
 		"ShippingOrders":[
 			{
-				"orderCode":"3X7ALXZ2",
-				"currentWarehouseId":1047,
-				"deliveryWarehouseId":1233,
-				"weight": 56,
-				"orderDate":"2017-06-05 14:55:53.000",
-				"shippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
-				"expectedDeliveryTime":"2017-06-06 19:00:00.000",
-				"fromDistrictId":1442,
-				"toDistrictId":1453,
-				"currentStatus":"Storing",
-				"pickWarehouseId":1047,
-				"returnHubId":0,
-				"returnWarehouseId":0
+				"orderId":"9899196",
+				"orderCode":"157127390992",
+				"weight": 50,
+				"clientId": 3200,
+				"currentWarehouseId":"1060",
+				"deliveryWarehouseId":"1046",
+				"pickWarehouseId":"1220",
+				"returnWarehouseId": "1220",
+				"orderDate": "2017-05-23T11:46:40",
+				"createdDate": "2017-05-23T11:46:40",
+				"expectedDeliveryTime":"2017-05-25T11:46:40",
+				"expectedReturnTime": "2017-05-27T11:46:40",
+				"currentStatus":"Return"
 			},
 			{
-				"orderCode":"6C7ALXZ2",
-				"currentWarehouseId":1047,
-				"deliveryWarehouseId":1233,
-				"weight": 56,
-				"orderDate":"2017-06-05 14:55:53.000",
-				"shippingAddress":"23 Nguyễn Chí Thanh, phường 16, Quận 11, Hồ Chí Minh, Việt Nam",
-				"expectedDeliveryTime":"2017-06-06 19:00:00.000",
-				"fromDistrictId":1442,
-				"toDistrictId":1453,
-				"currentStatus":"Storing",
-				"pickWarehouseId":1047,
-				"returnHubId":0,
-				"returnWarehouseId":0
+				"orderId":"9899196",
+				"orderCode":"157127390992",
+				"weight": 50,
+				"clientId": 3200,
+				"currentWarehouseId":"1060",
+				"deliveryWarehouseId":"1046",
+				"pickWarehouseId":"1220",
+				"returnWarehouseId": "1220",
+				"orderDate": "2017-05-23T11:46:40",
+				"createdDate": "2017-05-23T11:46:40",
+				"expectedDeliveryTime":"2017-05-25T11:46:40",
+				"expectedReturnTime": "2017-05-27T11:46:40",
+				"currentStatus":"Return"
 			}
 		]
 	}	
